@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#contentArea {
+  min-width: 320px;
+  max-width: 450px;
+  margin: auto;
+  padding: 0 5px;
+  border: 1px solid purple;
+}

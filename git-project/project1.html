@@ -6,19 +6,7 @@
 <title>Project 1</title>
 
 <style type="text/css">
-/*@import url(path/stylesheet.css);*/
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-#contentArea {
-  min-width: 320px;
-  max-width: 450px;
-  margin: auto;
-  padding: 0 5px;
-  border: 1px solid purple;
-}
+@import url(css/screen.css);
 
 .slashChart img {
   max-width: 450px
@@ -33,7 +21,7 @@ body {
 <!-- Start contentArea -->
 <div id="contentArea">
 
-<h1>Git Projects</h1>
+<h1>Project 1 - Merge Animation and Audio</h1>
 
 <!-- Start siteNav -->
 <div id="siteNav">
@@ -45,7 +33,7 @@ body {
 </div>
 <!-- End siteNav -->
 
-<h2>Project 1 - Merge Animation and Audio</h2>
+<h2>Aim of Project 1</h2>
 <p>The aim of this project is to find a way to activate an animated slash-chart (with moving cursor) when a linked audio console's 'play' button is pressed.</p>
 
 <div>
@@ -54,6 +42,12 @@ body {
     <img src="images/redCursor.png">
   </div>
 </div>
+<audio class="audioControl" controls preload="auto">
+  <source src="audio/a_d_a_e.mp3" type="audio/mp3">
+  <source src="audio/a_d_a_e.ogg" type="audio/ogg">
+</audio>
+
+<div style="height: 400px;"></div>
 	
 
 
