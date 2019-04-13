@@ -11,6 +11,7 @@
 .slashChart img {
   max-width: 450px
   height: auto;
+  display: block;
 }
 
 .slashChart {
@@ -23,14 +24,45 @@
   left: 4px;
 }
 
+@keyframes a-d-a-eSimple {
+  0% {}
+  100% {top: 14px; left: 320px;}
+}
+
+#a-d-a-eBasic .slashChart:focus .redCursor,
+#a-d-a-eBasic .slashChart:hover .redCursor {
+  animation: a-d-a-eSimple 16s linear;
+}
+
+/*
 @keyframes a-d-a-eProgression {
   0%   {}
   100% {top: 14px; left: 320px;}
 }
 
+.slashChart:focus .redCursor,
 .slashChart:hover .redCursor {
   animation: a-d-a-eProgression 16s 4s linear;
 }
+*/
+
+
+@keyframes a-d-a-eProgression {
+  0%     {}
+  16.66% {top: 14px; left: 4px;}
+  83.30% {top: 14px; left: 320px;}
+  83.40% {top: 14px; left: 4px;}
+  87.16% {top: 14px; left: 20px;}
+  100%   {top: 14px; left: 20px;}
+}
+
+.slashChart:focus .redCursor,
+.slashChart:hover .redCursor {
+  animation: a-d-a-eProgression 24s linear;
+}
+
+
+
 
 </style>
 
@@ -40,20 +72,54 @@
 <!-- Start contentArea -->
 <div id="contentArea">
 
-<h1>Project 1 - Merge Animation and Audio</h1>
-
 <!-- Start siteNav -->
 <div id="siteNav">
   <ul>
     <li><a href="index.html">Home Page</a></li>
-    <li><a href="project1.html">Project 1 - Merge Animation and Audio</a></li>
+    <li><a href="project1.html">Project 1 - Merge Animation &amp; Audio</a></li>
     <li><a href="template.html">Page Template</a></li>
   </ul>
 </div>
 <!-- End siteNav -->
 
-<h2>Aim of Project 1</h2>
-<p>The aim of this project is to find a way to activate an animated slash-chart (with moving cursor) when a linked audio console's 'play' button is pressed.</p>
+<h1>Project 1&mdash;Merge Animation &amp; Audio</h1>
+
+<h2>Aim of Project</h2>
+<p>To find a single-action method of playing back an animated chord-chart and its accompanying audio file.</p> 
+
+<p>The following is a typical example of a chord-chart:</p>
+
+<img src="images/a-d-a-eSlash.png">
+
+<P>These charts are very useful, especially for budding musicians&mdash;and musicians who like to improvise a bit&mdash;because they map-out exactly <em>how</em> and <em>when</em> the chords of a song (say) change over time.</P>
+
+<p>The following audio file shows how a guitarist might use the above chart to add a simple accompaniment.</p>
+
+<div>
+  <audio class="audioControl" controls preload="auto">
+    <source src="audio/a_d_a_eBasic.mp3" type="audio/mp3">
+    <source src="audio/a_d_a_eBasic.ogg" type="audio/ogg">
+  </audio>
+</div>
+
+<p>Beginners spent a lot of time monitoring the hand that changes chord, which makes following a chart a little more tricky. However, a simple moving cursor helps keep track of where the music is. Tap (or mouse hover) the following chart.</p>
+
+<div id="a-d-a-eBasic">
+  <div class="slashChart">
+    <img src="images/a-d-a-eSlash.png">
+    <div class="redCursor">
+      <img src="images/redCursor.png">
+    </div>
+  </div>
+</div>
+
+<p>This animated chord-chart actually works perfectly with the music file above. The only problem is, they both have seperate triggers. It is possible to view them together, but it means clicking the audio file, and then quickly tapping (hovering) the animation.</p>
+
+<hr>
+
+<p>The following chart and music file are a little more sophisticated. There's a four-click intro before the chords start playing, allowing time to pick up the guitar and play along.</p>
+
+<p>The other change included in this chart is a return to the first chord, A, after the fourth strum on E. It makes it sound complete.</p>
 
 <div id="a-d-a-e">
   <div class="slashChart">
@@ -64,8 +130,6 @@
   </div>
 </div>
 
-
-
 <div>
   <audio class="audioControl" controls preload="auto">
     <source src="audio/a_d_a_e.mp3" type="audio/mp3">
@@ -74,7 +138,7 @@
 </div>
 
 
-<div style="height: 400px;"></div>
+<div style="height: 100px;"></div>
 	
 
 

@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: Verdana, sans-serif;
   box-sizing: border-box;
 }
 #contentArea {
@@ -10,3 +11,34 @@ body {
   padding: 0 5px;
   border: 1px solid purple;
 }
+
+/* ======== Fonts ========== */
+h1, h2, h3, h4 {
+  color: rgba(72, 61, 139, .8);
+}
+h1, h2, h3, h4 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 150%;
+}
+h2 {
+  font-size: 125%;
+}
+h3 {
+  font-size: 110%;
+}
+h4 {
+  font-size: 100%;
+  margin-bottom: 0;
+}
+
+
+/* ======== Navigation ========== */
+/* Start Link Colors */
+a {text-decoration: none;}
+a:link,
+a:visited {color: rgba(130, 130, 255, 1);}
+a:hover {color: green;}
+a:active {color: red;}
+/* End Link Colors */
