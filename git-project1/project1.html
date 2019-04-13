@@ -13,6 +13,25 @@
   height: auto;
 }
 
+.slashChart {
+  position: relative;
+}
+
+.redCursor {
+  position: absolute;
+  top: 14px;
+  left: 4px;
+}
+
+@keyframes a-d-a-eProgression {
+  0%   {}
+  100% {top: 14px; left: 320px;}
+}
+
+.slashChart:hover .redCursor {
+  animation: a-d-a-eProgression 16s 4s linear;
+}
+
 </style>
 
 </head>
@@ -36,16 +55,24 @@
 <h2>Aim of Project 1</h2>
 <p>The aim of this project is to find a way to activate an animated slash-chart (with moving cursor) when a linked audio console's 'play' button is pressed.</p>
 
-<div>
+<div id="a-d-a-e">
   <div class="slashChart">
     <img src="images/a-d-a-eSlash.png">
-    <img src="images/redCursor.png">
+    <div class="redCursor">
+      <img src="images/redCursor.png">
+    </div>
   </div>
 </div>
-<audio class="audioControl" controls preload="auto">
-  <source src="audio/a_d_a_e.mp3" type="audio/mp3">
-  <source src="audio/a_d_a_e.ogg" type="audio/ogg">
-</audio>
+
+
+
+<div>
+  <audio class="audioControl" controls preload="auto">
+    <source src="audio/a_d_a_e.mp3" type="audio/mp3">
+    <source src="audio/a_d_a_e.ogg" type="audio/ogg">
+  </audio>
+</div>
+
 
 <div style="height: 400px;"></div>
 	
